@@ -1,4 +1,7 @@
 from nltk.chat.util import Chat, reflections
+from Login import login
+from account_details import G_password, G_username,Insta_password,Insta_username
+from time import sleep
 
 # Pairs is a list of patterns and responses.
 pairs = [
@@ -75,10 +78,17 @@ my_dummy_reflections= {
 }
 
 #default message at the start of chat
-print("Hi, I'm Helper and I am here to help \nPlease type lowercase English language to start a conversation. Type quit to leave ")
+print("Hi, I'm Helper and I am here to help \nPlease type lowercase English language to start a conversation. Type quit to leave and Get back to business xd")
 
 #Create Chat Bot
 chat = Chat(pairs, reflections ,)
 
 #Start conversation
 chat.converse()
+print("Let get to work \nShall we xd")
+sleep(2)
+print("Setting up Your enviroment")
+sleep(2)
+get = login(G_username,G_password,Insta_username,Insta_password)
+get.G_login()
+get.Insta_login()
